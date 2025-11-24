@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solvente - Transforming Global Aviation Systems</title>
+    <!-- Favicon using the logo (simple placeholder based on colors) -->
+    <link rel="icon" type="image/png" href="images\icon logo.png">
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- Load Lucide Icons for professional graphics -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        /* Define Custom Colors based on the logo (Teal and Lime Green) */
+        :root {
+            --primary-teal: #1B6A78; /* Deep Teal/Blue-Green */
+            --accent-lime: #97C94E; /* Vibrant Lime Green Accent */
+            --light-bg: #F9F9F9;
+        }
+
         /* Custom styles for a clean, modern aviation tech look */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Light grey background */
+            background-color: var(--light-bg);
         }
         .header-shadow {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
@@ -23,10 +32,11 @@
         }
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            /* Use the primary color for the hover shadow */
+            box-shadow: 0 4px 15px var(--primary-teal); 
         }
         .section-header {
-            color: #1e3a8a; /* Darker blue for emphasis */
+            color: var(--primary-teal); 
             position: relative;
         }
         .section-header::after {
@@ -34,14 +44,15 @@
             display: block;
             width: 50px;
             height: 3px;
-            background-color: #3b82f6; /* Accent blue */
+            background-color: var(--accent-lime); /* Accent Green */
             margin-top: 8px;
             margin-left: auto;
             margin-right: auto;
             border-radius: 2px;
         }
         .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            /* Deep Teal to Accent Lime Gradient for Contact Section */
+            background: linear-gradient(135deg, var(--primary-teal) 0%, #298c9c 100%);
         }
     </style>
 </head>
@@ -49,20 +60,26 @@
 
     <!-- Navigation Bar -->
     <nav id="home" class="sticky top-0 z-50 bg-white header-shadow">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo / Brand Name -->
-            <a href="#home" class="text-2xl font-bold text-blue-700 tracking-tight">Solvente<span class="text-gray-500">.io</span></a>
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo (Image) -->
+            <a href="#home" class="flex items-center">
+                <img src="images\logo full.jpg" class="h-6 w-auto mr-2" alt="Solvente Logo">
+            </a>
+            <!-- Text Fallback (hidden when image is present) -->
+            <a href="#home" class="md:hidden text-2xl font-bold text-[--primary-teal] tracking-tight">Solvente<span class="text-gray-500">.io</span></a>
+
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Home</a>
-                <a href="#solution" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Our Solution</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">About Us</a>
-                <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-150 cta-button">Contact Us</a>
+                <a href="#home" class="text-gray-600 hover:text-[--accent-lime] transition duration-150 font-medium">Home</a>
+                <a href="#solution" class="text-gray-600 hover:text-[--accent-lime] transition duration-150 font-medium">Our Solution</a>
+                <a href="#about" class="text-gray-600 hover:text-[--accent-lime] transition duration-150 font-medium">About Us</a>
+                <!-- CTA Button (Primary Teal background) -->
+                <a href="#contact" class="px-4 py-2 bg-[--primary-teal] text-white rounded-lg hover:bg-[#125763] transition duration-150 cta-button">Contact Us</a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-blue-600 p-2 rounded-lg transition duration-150" onclick="toggleMobileMenu()">
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-[--accent-lime] p-2 rounded-lg transition duration-150" onclick="toggleMobileMenu()">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
@@ -72,23 +89,24 @@
             <a href="#home" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">Home</a>
             <a href="#solution" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">Our Solution</a>
             <a href="#about" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">About Us</a>
-            <a href="#contact" class="block py-3 px-4 bg-blue-50 text-blue-700 hover:bg-blue-100" onclick="toggleMobileMenu()">Contact Us</a>
+            <!-- Mobile CTA (Primary Teal text) -->
+            <a href="#contact" class="block py-3 px-4 bg-gray-50 text-[--primary-teal] hover:bg-gray-100" onclick="toggleMobileMenu()">Contact Us</a>
         </div>
     </nav>
 
     <!-- Hero Section (Home) -->
-    <header class="pt-16 pb-24 lg:pt-24 lg:pb-32 bg-gray-50">
+    <header class="pt-16 pb-24 lg:pt-24 lg:pb-32 bg-white">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <!-- Headline -->
+            <!-- Headline (Accent Lime text) -->
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-                Transforming Global <span class="text-blue-600">Aviation Systems</span> with Modern, Intuitive Technology
+                Transforming Global <span class="text-[--accent-lime]">Aviation Systems</span> with Modern, Intuitive Technology
             </h1>
             <!-- Sub-headline -->
             <p class="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto mb-10">
                 Powered by cutting-edge, user-centric software designed for efficiency and reliability.
             </p>
-            <!-- Primary CTA (Revision: Links to contact) -->
-            <a href="mailto:info@solvente.io" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-500/50 hover:bg-blue-700 cta-button transition-all duration-300 ease-in-out">
+            <!-- Primary CTA (Primary Teal background) -->
+            <a href="mailto:info@solvente.io" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-xl bg-[--primary-teal] text-white shadow-lg shadow-[--primary-teal]/50 hover:bg-[#125763] cta-button transition-all duration-300 ease-in-out">
                 Contact Us
                 <i data-lucide="mail" class="w-5 h-5 ml-2"></i>
             </a>
@@ -96,14 +114,15 @@
     </header>
 
     <!-- Problem & Solution Overview (Home Sections) -->
-    <section id="problem-solution" class="py-20 lg:py-32">
+    <section id="problem-solution" class="py-20 lg:py-32 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Problem Description -->
                 <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100">
-                    <div class="inline-block p-3 rounded-full bg-red-100 text-red-600 mb-6">
+                    <div class="inline-block p-3 rounded-full bg-red-100 text-red-500 mb-6">
                         <i data-lucide="alert-triangle" class="w-6 h-6"></i>
                     </div>
+                    <!-- Header uses custom CSS variable (Primary Teal) -->
                     <h2 class="text-3xl font-bold section-header text-center sm:text-left mb-6">
                         The Problem with Current Digital Architecture
                     </h2>
@@ -113,9 +132,11 @@
                 </div>
                 <!-- Solution Summary -->
                 <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100">
-                    <div class="inline-block p-3 rounded-full bg-green-100 text-green-600 mb-6">
+                    <!-- Icon uses Accent Lime Green -->
+                    <div class="inline-block p-3 rounded-full bg-green-100 text-[--accent-lime] mb-6">
                         <i data-lucide="zap" class="w-6 h-6"></i>
                     </div>
+                    <!-- Header uses custom CSS variable (Primary Teal) -->
                     <h2 class="text-3xl font-bold section-header text-center sm:text-left mb-6">
                         Our Solution: Streamlined Financial Operations
                     </h2>
@@ -127,25 +148,25 @@
         </div>
     </section>
 
-    <!-- Key Metrics / Highlights (Revision: Currencies, not countries) -->
-    <section class="py-16 bg-blue-50">
+    <!-- Key Metrics / Highlights (Accent Lime Green) -->
+    <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <div class="grid sm:grid-cols-3 gap-8">
                 <!-- Metric 1: Currency Support -->
-                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-blue-500">
-                    <p class="text-5xl font-extrabold text-blue-600 mb-2">50+</p>
+                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-[--accent-lime]">
+                    <p class="text-5xl font-extrabold text-[--accent-lime] mb-2">50+</p>
                     <p class="text-lg font-semibold text-gray-700">Currencies Supported</p>
                     <p class="text-sm text-gray-500 mt-1">Facilitating true global finance.</p>
                 </div>
                 <!-- Metric 2: Efficiency (Mock Data) -->
-                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-blue-500">
-                    <p class="text-5xl font-extrabold text-blue-600 mb-2">99%+</p>
+                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-[--accent-lime]">
+                    <p class="text-5xl font-extrabold text-[--accent-lime] mb-2">99%+</p>
                     <p class="text-lg font-semibold text-gray-700">Reconciliation Accuracy</p>
                     <p class="text-sm text-gray-500 mt-1">Minimizing disputes and delays.</p>
                 </div>
                 <!-- Metric 3: Speed (Mock Data) -->
-                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-blue-500">
-                    <p class="text-5xl font-extrabold text-blue-600 mb-2">75%</p>
+                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-[--accent-lime]">
+                    <p class="text-5xl font-extrabold text-[--accent-lime] mb-2">75%</p>
                     <p class="text-lg font-semibold text-gray-700">Reduction in Processing Time</p>
                     <p class="text-sm text-gray-500 mt-1">Accelerating cash flow.</p>
                 </div>
@@ -154,17 +175,18 @@
     </section>
 
     <!-- Our Solution Details Section -->
-    <section id="solution" class="py-20 lg:py-32">
+    <section id="solution" class="py-20 lg:py-32 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4">
+            <!-- Header uses custom CSS variable (Primary Teal) -->
             <h2 class="text-4xl font-extrabold section-header text-center mb-16">
                 How Solvente Delivers Value
             </h2>
             <div class="space-y-12">
 
-                <!-- Feature 1: Automated Reconciliation -->
+                <!-- Feature 1: Automated Reconciliation (Icon uses Primary Teal) -->
                 <div class="flex flex-col lg:flex-row items-center bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                     <div class="lg:w-1/3 flex justify-center p-6">
-                        <i data-lucide="refresh-cw" class="w-20 h-20 text-blue-600"></i>
+                        <i data-lucide="refresh-cw" class="w-20 h-20 text-[--primary-teal]"></i>
                     </div>
                     <div class="lg:w-2/3 lg:pl-8 text-center lg:text-left">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Automated Reconciliation</h3>
@@ -174,10 +196,10 @@
                     </div>
                 </div>
 
-                <!-- Feature 2: Centralized Fee Management -->
+                <!-- Feature 2: Centralized Fee Management (Icon uses Primary Teal) -->
                 <div class="flex flex-col lg:flex-row-reverse items-center bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                     <div class="lg:w-1/3 flex justify-center p-6">
-                        <i data-lucide="database" class="w-20 h-20 text-blue-600"></i>
+                        <i data-lucide="database" class="w-20 h-20 text-[--primary-teal]"></i>
                     </div>
                     <div class="lg:w-2/3 lg:pr-8 text-center lg:text-right">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Centralized Fee Management</h3>
@@ -187,10 +209,10 @@
                     </div>
                 </div>
 
-                <!-- Feature 3: Enhanced Financial Visibility -->
+                <!-- Feature 3: Enhanced Financial Visibility (Icon uses Primary Teal) -->
                 <div class="flex flex-col lg:flex-row items-center bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                     <div class="lg:w-1/3 flex justify-center p-6">
-                        <i data-lucide="line-chart" class="w-20 h-20 text-blue-600"></i>
+                        <i data-lucide="line-chart" class="w-20 h-20 text-[--primary-teal]"></i>
                     </div>
                     <div class="lg:w-2/3 lg:pl-8 text-center lg:text-left">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Enhanced Financial Visibility</h3>
@@ -201,10 +223,10 @@
                 </div>
             </div>
 
-            <!-- CTA for Our Solution (Revision: Replace Request Demo) -->
+            <!-- CTA for Our Solution (Primary Teal background) -->
             <div class="text-center mt-16">
                 <p class="text-xl text-gray-700 mb-4 font-medium">Ready to see our solution in action?</p>
-                <a href="mailto:info@solvente.io" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-500/50 hover:bg-blue-700 cta-button transition-all duration-300 ease-in-out">
+                <a href="mailto:info@solvente.io" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-xl bg-[--primary-teal] text-white shadow-lg shadow-[--primary-teal]/50 hover:bg-[#125763] cta-button transition-all duration-300 ease-in-out">
                     Contact Us for More Information
                     <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
                 </a>
@@ -212,17 +234,18 @@
         </div>
     </section>
 
-    <!-- About Us Section (Mission & Vision Only) -->
-    <section id="about" class="py-20 lg:py-32 bg-gray-50">
+    <!-- About Us Section (Primary Teal icons) -->
+    <section id="about" class="py-20 lg:py-32 bg-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
+            <!-- Header uses custom CSS variable (Primary Teal) -->
             <h2 class="text-4xl font-extrabold section-header mb-16">
                 About Solvente
             </h2>
 
             <!-- Mission Statement -->
-            <div class="mb-12 bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <div class="mb-12 bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
                 <h3 class="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
-                    <i data-lucide="flag" class="w-7 h-7 text-blue-600 mr-3"></i> Mission
+                    <i data-lucide="flag" class="w-7 h-7 text-[--primary-teal] mr-3"></i> Mission
                 </h3>
                 <p class="text-xl text-gray-600 leading-relaxed italic">
                     "To build the indispensable financial infrastructure for global air navigation service providers (ANSPs), enabling seamless, reliable, and transparent cross-border fee settlement."
@@ -230,9 +253,9 @@
             </div>
 
             <!-- Vision Statement -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
                 <h3 class="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
-                    <i data-lucide="eye" class="w-7 h-7 text-blue-600 mr-3"></i> Vision
+                    <i data-lucide="eye" class="w-7 h-7 text-[--primary-teal] mr-3"></i> Vision
                 </h3>
                 <p class="text-xl text-gray-600 leading-relaxed italic">
                     "To redefine the standard for aviation finance, creating a world where every global flight transaction is settled instantly and accurately, fueling the future growth of international air travel."
@@ -241,7 +264,7 @@
         </div>
     </section>
 
-    <!-- Contact Us Section (Revision: info@solvente.io, Remove Twitter, Add LinkedIn) -->
+    <!-- Contact Us Section (Gradient uses Primary Teal) -->
     <section id="contact" class="py-20 lg:py-32 gradient-bg">
         <div class="max-w-4xl mx-auto px-4 text-center text-white">
             <h2 class="text-4xl font-extrabold mb-6">
@@ -252,21 +275,21 @@
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8">
-                <!-- Email Contact -->
-                <a href="mailto:info@solvente.io" class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition cta-button shadow-lg">
+                <!-- Email Contact (Text uses Primary Teal) -->
+                <a href="mailto:info@solvente.io" class="inline-flex items-center justify-center px-6 py-3 bg-white text-[--primary-teal] font-semibold rounded-xl hover:bg-gray-100 transition cta-button shadow-lg">
                     <i data-lucide="mail" class="w-5 h-5 mr-2"></i> info@solvente.io
                 </a>
 
-                <!-- LinkedIn Contact (Placeholder URL) -->
-                <a href="https://linkedin.com/company/solvente-aviation" target="_blank" class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition cta-button shadow-lg">
+                <!-- LinkedIn Contact (Text uses Primary Teal) -->
+                <a href="https://linkedin.com/company/solvente-aviation" target="_blank" class="inline-flex items-center justify-center px-6 py-3 bg-white text-[--primary-teal] font-semibold rounded-xl hover:bg-gray-100 transition cta-button shadow-lg">
                     <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> Solvente on LinkedIn
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8">
+    <!-- Footer (Primary Teal) -->
+    <footer class="bg-[--primary-teal] py-8">
         <div class="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
             <p>&copy; 2025 Solvente. All rights reserved.</p>
             <div class="mt-4 flex justify-center space-x-4">
