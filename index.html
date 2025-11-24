@@ -59,40 +59,43 @@
 <body class="text-gray-800">
 
     <!-- Navigation Bar -->
-    <nav id="home" class="sticky top-0 z-50 bg-white header-shadow">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Logo (Image) -->
-            <a href="#home" class="flex items-center">
-                <img src="images\logo full.jpg" class="h-10 w-auto mr-2" alt="Solvente Logo">
-            </a>
-            <!-- Text Fallback (hidden when image is present) -->
-            <a href="#home" class="md:hidden text-2xl font-bold text-[--primary-teal] tracking-tight">Solvente</a>
-
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-6"> <!-- Adjusted spacing from space-x-8 to space-x-6 -->
-                <a href="#home" class="text-gray-600 hover:text-[--accent-lime] transition duration-150 font-medium py-2">Home</a>
-                <a href="#solution" class="text-gray-600 hover:text-[--accent-lime] transition duration-150 font-medium py-2">Our Solution</a>
-                <a href="#about" class="text-gray-600 hover:text-[--accent-lime] transition duration-150 font-medium py-2">About Us</a>
-                <!-- CTA Button (Primary Teal background) -->
-                <a href="#contact" class="inline-flex items-center px-4 py-2 bg-[--primary-teal] text-white rounded-lg hover:bg-[#125763] transition duration-150 cta-button">
-                    Contact Us
+    <nav id="home" class="sticky top-0 w-full bg-white header-shadow">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo (Image) -->
+                <a href="#home" class="flex items-center space-x-2 h-full">
+                    <img src="images\logo full.png" class="h-8 w-auto" alt="Solvente Logo">
                 </a>
+                <!-- Text Fallback (hidden when image is present) -->
+                <!-- a href="#home" class="md:hidden text-2xl font-bold text-[--primary-teal] tracking-tight">Solvente</a -->
+
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6"> <!-- Adjusted spacing from space-x-8 to space-x-6 -->
+                    <a href="#home" class="text-gray-600 hover:text-[--accent-lime] transition duration-150 font-medium py-2">Home</a>
+                    <a href="#solution" class="text-gray-600 hover:text-[--accent-lime] transition duration-150 font-medium py-2">Our Solution</a>
+                    <a href="#about" class="text-gray-600 hover:text-[--accent-lime] transition duration-150 font-medium py-2">About Us</a>
+                    <!-- CTA Button (Primary Teal background) -->
+                    <a href="#contact" class="inline-flex items-center px-4 py-2 bg-[--primary-teal] text-white rounded-lg hover:bg-[#125763] transition duration-150 cta-button">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-[--accent-lime] p-2 rounded-lg transition duration-150" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
+        
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-[--accent-lime] p-2 rounded-lg transition duration-150" onclick="toggleMobileMenu()">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu (Hidden by Default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white w-full border-t border-gray-100">
-            <a href="#home" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">Home</a>
-            <a href="#solution" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">Our Solution</a>
-            <a href="#about" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">About Us</a>
-            <!-- Mobile CTA (Primary Teal text) -->
-            <a href="#contact" class="block py-3 px-4 bg-gray-50 text-[--primary-teal] hover:bg-gray-100" onclick="toggleMobileMenu()">Contact Us</a>
+            <!-- Mobile Menu (Hidden by Default) -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white w-full border-t border-gray-100">
+                <a href="#home" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">Home</a>
+                <a href="#solution" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">Our Solution</a>
+                <a href="#about" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">About Us</a>
+                <!-- Mobile CTA (Primary Teal text) -->
+                <a href="#contact" class="block py-3 px-4 bg-gray-50 text-[--primary-teal] hover:bg-gray-100" onclick="toggleMobileMenu()">Contact Us</a>
+            </div>
         </div>
     </nav>
 
