@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solvente - Transforming Global Aviation Systems</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide Icons for professional graphics -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for a clean, modern aviation tech look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light grey background */
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+        }
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+        .section-header {
+            color: #1e3a8a; /* Darker blue for emphasis */
+            position: relative;
+        }
+        .section-header::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #3b82f6; /* Accent blue */
+            margin-top: 8px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 2px;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav id="home" class="sticky top-0 z-50 bg-white header-shadow">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo / Brand Name -->
+            <a href="#home" class="text-2xl font-bold text-blue-700 tracking-tight">Solvente<span class="text-gray-500">.io</span></a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Home</a>
+                <a href="#solution" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">Our Solution</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-150 font-medium">About Us</a>
+                <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-150 cta-button">Contact Us</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-blue-600 p-2 rounded-lg transition duration-150" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full border-t border-gray-100">
+            <a href="#home" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">Home</a>
+            <a href="#solution" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">Our Solution</a>
+            <a href="#about" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 border-b" onclick="toggleMobileMenu()">About Us</a>
+            <a href="#contact" class="block py-3 px-4 bg-blue-50 text-blue-700 hover:bg-blue-100" onclick="toggleMobileMenu()">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Home) -->
+    <header class="pt-16 pb-24 lg:pt-24 lg:pb-32 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <!-- Headline -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                Transforming Global <span class="text-blue-600">Aviation Systems</span> with Modern, Intuitive Technology
+            </h1>
+            <!-- Sub-headline -->
+            <p class="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto mb-10">
+                Powered by cutting-edge, user-centric software designed for efficiency and reliability.
+            </p>
+            <!-- Primary CTA (Revision: Links to contact) -->
+            <a href="mailto:info@solvente.io" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-500/50 hover:bg-blue-700 cta-button transition-all duration-300 ease-in-out">
+                Contact Us
+                <i data-lucide="mail" class="w-5 h-5 ml-2"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Problem & Solution Overview (Home Sections) -->
+    <section id="problem-solution" class="py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Problem Description -->
+                <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100">
+                    <div class="inline-block p-3 rounded-full bg-red-100 text-red-600 mb-6">
+                        <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold section-header text-center sm:text-left mb-6">
+                        The Problem with Current Digital Architecture
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Legacy systems and fragmented digital processes dominate the aviation sector, leading to delays, high operational costs, and significant reconciliation challenges for critical financial streams, including passenger and cargo charges, and governmental fees. This complexity hinders real-time visibility and global scalability.
+                    </p>
+                </div>
+                <!-- Solution Summary -->
+                <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100">
+                    <div class="inline-block p-3 rounded-full bg-green-100 text-green-600 mb-6">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold section-header text-center sm:text-left mb-6">
+                        Our Solution: Streamlined Financial Operations
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Solvente provides a centralized, modern platform that digitizes and automates the collection and settlement of fees across the global aviation ecosystem. Our technology ensures immediate data consistency and delivers end-to-end reliability, drastically reducing manual effort and financial friction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics / Highlights (Revision: Currencies, not countries) -->
+    <section class="py-16 bg-blue-50">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="grid sm:grid-cols-3 gap-8">
+                <!-- Metric 1: Currency Support -->
+                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-blue-500">
+                    <p class="text-5xl font-extrabold text-blue-600 mb-2">50+</p>
+                    <p class="text-lg font-semibold text-gray-700">Currencies Supported</p>
+                    <p class="text-sm text-gray-500 mt-1">Facilitating true global finance.</p>
+                </div>
+                <!-- Metric 2: Efficiency (Mock Data) -->
+                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-blue-500">
+                    <p class="text-5xl font-extrabold text-blue-600 mb-2">99%+</p>
+                    <p class="text-lg font-semibold text-gray-700">Reconciliation Accuracy</p>
+                    <p class="text-sm text-gray-500 mt-1">Minimizing disputes and delays.</p>
+                </div>
+                <!-- Metric 3: Speed (Mock Data) -->
+                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-blue-500">
+                    <p class="text-5xl font-extrabold text-blue-600 mb-2">75%</p>
+                    <p class="text-lg font-semibold text-gray-700">Reduction in Processing Time</p>
+                    <p class="text-sm text-gray-500 mt-1">Accelerating cash flow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Solution Details Section -->
+    <section id="solution" class="py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-extrabold section-header text-center mb-16">
+                How Solvente Delivers Value
+            </h2>
+            <div class="space-y-12">
+
+                <!-- Feature 1: Automated Reconciliation -->
+                <div class="flex flex-col lg:flex-row items-center bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="lg:w-1/3 flex justify-center p-6">
+                        <i data-lucide="refresh-cw" class="w-20 h-20 text-blue-600"></i>
+                    </div>
+                    <div class="lg:w-2/3 lg:pl-8 text-center lg:text-left">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Automated Reconciliation</h3>
+                        <p class="text-lg text-gray-600">
+                            Our core capability digitizes and matches payment records with air traffic data instantaneously. This eliminates complex cross-system data matching, providing a single source of truth for all transactional fees. This process is fully auditable and compliant with global financial standards.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Centralized Fee Management -->
+                <div class="flex flex-col lg:flex-row-reverse items-center bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="lg:w-1/3 flex justify-center p-6">
+                        <i data-lucide="database" class="w-20 h-20 text-blue-600"></i>
+                    </div>
+                    <div class="lg:w-2/3 lg:pr-8 text-center lg:text-right">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Centralized Fee Management</h3>
+                        <p class="text-lg text-gray-600">
+                            Manage all fee structures, rate changes, and regulatory requirements from one intuitive dashboard. Solvente ensures tariffs are always current and applied correctly, reducing revenue leakage and administrative overhead associated with manual updates.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Enhanced Financial Visibility -->
+                <div class="flex flex-col lg:flex-row items-center bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="lg:w-1/3 flex justify-center p-6">
+                        <i data-lucide="line-chart" class="w-20 h-20 text-blue-600"></i>
+                    </div>
+                    <div class="lg:w-2/3 lg:pl-8 text-center lg:text-left">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Enhanced Financial Visibility</h3>
+                        <p class="text-lg text-gray-600">
+                            Gain real-time insights into cash flow, outstanding fees, and settlement status across all global operations. Comprehensive reporting tools allow for proactive decision-making and compliance monitoring, moving away from monthly report cycles to live data access.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA for Our Solution (Revision: Replace Request Demo) -->
+            <div class="text-center mt-16">
+                <p class="text-xl text-gray-700 mb-4 font-medium">Ready to see our solution in action?</p>
+                <a href="mailto:info@solvente.io" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-500/50 hover:bg-blue-700 cta-button transition-all duration-300 ease-in-out">
+                    Contact Us for More Information
+                    <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section (Mission & Vision Only) -->
+    <section id="about" class="py-20 lg:py-32 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold section-header mb-16">
+                About Solvente
+            </h2>
+
+            <!-- Mission Statement -->
+            <div class="mb-12 bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+                    <i data-lucide="flag" class="w-7 h-7 text-blue-600 mr-3"></i> Mission
+                </h3>
+                <p class="text-xl text-gray-600 leading-relaxed italic">
+                    "To build the indispensable financial infrastructure for global air navigation service providers (ANSPs), enabling seamless, reliable, and transparent cross-border fee settlement."
+                </p>
+            </div>
+
+            <!-- Vision Statement -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+                    <i data-lucide="eye" class="w-7 h-7 text-blue-600 mr-3"></i> Vision
+                </h3>
+                <p class="text-xl text-gray-600 leading-relaxed italic">
+                    "To redefine the standard for aviation finance, creating a world where every global flight transaction is settled instantly and accurately, fueling the future growth of international air travel."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section (Revision: info@solvente.io, Remove Twitter, Add LinkedIn) -->
+    <section id="contact" class="py-20 lg:py-32 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 text-center text-white">
+            <h2 class="text-4xl font-extrabold mb-6">
+                Connect With Our Team
+            </h2>
+            <p class="text-xl font-light mb-12">
+                We are ready to discuss how Solvente can transform your operational efficiency.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8">
+                <!-- Email Contact -->
+                <a href="mailto:info@solvente.io" class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition cta-button shadow-lg">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i> info@solvente.io
+                </a>
+
+                <!-- LinkedIn Contact (Placeholder URL) -->
+                <a href="https://linkedin.com/company/solvente-aviation" target="_blank" class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition cta-button shadow-lg">
+                    <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> Solvente on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Solvente. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#solution" class="hover:text-white">Our Solution</a>
+                <span class="text-gray-600">|</span>
+                <a href="#about" class="hover:text-white">About Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Lucide Icons and Mobile Menu Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile menu toggle logic
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const iconName = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
+            mobileMenuBtn.innerHTML = `<i data-lucide="${iconName}" class="w-6 h-6"></i>`;
+            lucide.createIcons(); // Re-render icons
+        }
+    </script>
+</body>
+</html>
